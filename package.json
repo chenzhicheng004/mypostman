@@ -1,0 +1,27 @@
+{
+  "name": "mypostman",
+  "version": "1.0.0",
+  "description": "我要自己写一个postman",
+  "main": "index.js",
+  "scripts": {
+    "mypostman": "PORT=8075 node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chenzhicheng004/mypostman.git"
+  },
+  "keywords": [
+    "mypostman"
+  ],
+  "author": "chenzhicheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenzhicheng004/mypostman/issues"
+  },
+  "homepage": "https://github.com/chenzhicheng004/mypostman#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  }
+}

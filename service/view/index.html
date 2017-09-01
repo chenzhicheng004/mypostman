@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/easyui.css"/>
+		<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+		<link rel="stylesheet" href="css/jquery.json-viewer.css"  />
+		<link rel="stylesheet" href="css/index.css"/>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="leftDiv">
+				<% if(requestUrlArr.length){%>
+				<ul id="accordion" class="accordion">
+					<% requestUrlArr.forEach(function(item){ %>
+					<li>
+						<div class="link"><%= item.conName %><i class="fa fa-chevron-down"></i></div>
+						<% if(item.urlArr.length){ %>
+						<ul class="submenu">
+							<% item.urlArr.forEach(function(url){ %>
+							<li class="submenu-item">
+								<a><%= url.path %></a>
+								<input type="hidden" id="paramsData" value="<%= JSON.stringify(url.params) %>"/>
+							</li>
+							<% }) %>
+						</ul>
+						<% } %>
+					</li>
+					<% }) %>			
+				</ul>
+				<% } %>
+			</div>
+			<!-- <div class="gap">
+			</div> -->
+			<div class="rightDiv">
+				<div id="tt" class="easyui-tabs" data-options="tools:'#tab-tools',plain:true,closable:true">
+					<div id="content" title="...">
+						<div class="content2">
+							<div>
+								<select class="method">
+							        <option value="get">get</option>
+									<option value="post">post</option>
+							    </select>
+								<input class="url" type="text" name="url" value=""/>
+								<input type="submit" value='params' class="params"/>
+								<input type="submit" value='send' class="send"/>
+							</div>
+
+							<div class="paramsDiv hideParamDiv">
+								<div>
+									<span>name</span>
+									<span>value</span>
+									<span>description</span>
+								</div>
+							</div>
+							
+							<div class="content-body">
+								<div class="body-head">
+									<span>Response<span>
+									<input type="submit" value='格式化' class="formatRes"/>
+								</div>
+								<div class="remoteRes"></div>	
+							</div>
+						</div>	
+					</div>	
+
+				</div>
+				<div id="tab-tools">
+					<a id="addTabBtn" class="easyui-linkbutton" data-options="plain:true">+</a>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src='http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js'></script>
+		<script type="text/javascript" src='js/pm.js'></script>
+		<script type="text/javascript" src='js/jquery.easyui.min.js'></script>
+		<script type="text/javascript" src="js/jquery.json-viewer.js"></script> 
+	</body>
+</html>

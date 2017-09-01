@@ -1,0 +1,269 @@
+/*
+* @Author: chenzhicheng
+* @Date:   2017-08-28 16:50:23
+* @Last Modified by:   chenzhicheng
+* @Last Modified time: 2017-09-01 11:50:22
+*/
+#wrap{
+	width: 1200px;
+	position: relative;
+	clear: both;
+	margin: 10px auto;
+	min-height: 1000px;
+}
+
+.leftDiv{
+	background-color: white;
+	border: 1px solid #95B8E7;
+	float: left;
+	min-height: 800px;
+	width: 350px;
+	margin-top: 10px;
+	overflow: hidden;
+	-webkit-border-radius: 4px;
+ 	-moz-border-radius: 4px;
+ 	border-radius: 4px;
+}
+
+// .gap{
+// 	float: left;
+// 	width: 1px;
+// 	border: 1px solid #95B8E7;
+// 	background-color: #95B8E7;
+// 	min-height: 790px;
+// 	margin: 15px 0px;
+// 	position: absolute;
+// 	cursor: e-resize;
+// 	left: 200px;
+// }
+
+.rightDiv{
+	background-color: white;
+	float: left;
+	width: 800px;
+	margin: 10px 0px 10px 10px;
+	-webkit-border-radius: 4px;
+ 	-moz-border-radius: 4px;
+ 	border-radius: 4px;
+}
+
+.liTitle{
+	line-height: 30px;
+	height: 30px;
+	width: 100%;
+	background-color: grey;
+}
+
+.fa{
+	cursor: pointer;
+}
+
+ul{
+	margin: 0;
+	list-style-type: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+}
+
+a {
+	color: #b63b4d;
+	text-decoration: none;
+}
+
+.submenu-item{
+	height: 20px;
+	line-height: 20px;
+}
+
+.accordion {
+ 	width: 100%;
+ 	max-width: 350px;
+ 	margin: 30px auto;
+ 	border: none;
+}
+
+.accordion .link {
+	cursor: pointer;
+	display: block;
+	padding: 15px 15px 15px 42px;
+	color: #4D4D4D;
+	font-size: 14px;
+	font-weight: 700;
+	border-bottom: 1px solid #95B8E7;
+	position: relative;
+}
+
+.accordion li i {
+	position: absolute;
+	top: 16px;
+	left: 12px;
+	font-size: 16px;
+	color: #595959;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li.open i.fa-chevron-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.submenu {
+ 	display: none;
+ 	font-size: 14px;
+ }
+
+.submenu a {
+ 	display: block;
+ 	text-decoration: none;
+ 	color: grey;
+ 	padding-left: 42px;
+}
+
+.submenu a:hover {
+ 	color: red;
+ 	cursor: pointer;
+}
+
+#tt{
+	width: 100%;
+	min-height: 800px;
+}
+
+#hiddenData{
+	display: none;
+}
+
+.tabs-panels{
+	border-width: 0;
+	border-style: none;
+}
+
+.content2{
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.method{
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	outline: none;
+	border: 1px solid #95B8E7;
+
+	appearance:none;
+  	-moz-appearance:none;
+  	-webkit-appearance:none;
+  	background: url("images/combo_arrow.png") no-repeat scroll right center transparent;
+  	padding-right: 5px;
+	padding-left: 10px;
+}
+
+.url{
+	width: 500px;
+	height: 25px;
+	line-height: 25px;
+	outline: none;
+	border: 1px solid #95B8E7;
+	font-size: 14px;
+	padding-left: 5px;
+}
+
+.formatRes{
+	float: right;
+}
+
+.body-head{
+	width: 90%;
+	height: 25px;
+	line-height: 25px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.send,.params,.formatRes{
+	width: 50px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	outline: none;
+	border: 1px solid #95B8E7;
+	background-color: white;
+}
+
+.send:hover,.params:hover,.formatRes:hover{
+	background-color: #95B8E7;
+}
+.send:active,.params:active,.formatRes:active{
+	background-color: grey;
+}
+
+.content-body{
+	margin-top: 20px;
+}
+
+
+
+.remoteRes{
+	width: 90%;
+	height: 680px;
+	border: 1px solid #95B8E7;
+	padding: 10px;
+}
+
+.paramsDiv{
+	width: 90%;
+}
+
+.paramsDiv div span{
+	display: inline-block;
+	width: 30%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.paramsDiv div input{
+	display: inline-block;
+	width: 30%;
+	outline: none;
+	border: 1px solid #95B8E7;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.paramsDiv div input[readonly='readonly']{
+	border: none;
+}
+
+.dynamicAdd{
+	margin: 5px;
+}
+
+.dynamicAdd input{
+	margin-left: 5px;
+}
+
+.hideParamDiv{
+	display: none;
+}
+
+
+
